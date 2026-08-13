@@ -10,9 +10,9 @@
  */
 class Solution {
     public ListNode middleNode(ListNode head) {
-        int length=1;
+        int length=0;
         ListNode temp=head;
-        for(ListNode t=head; t.next!=null; t=t.next){
+        for(ListNode t=head; t!=null; t=t.next){
             length++;
         }
         for(int i=1; i<=length/2; i++){
