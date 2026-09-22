@@ -27,7 +27,7 @@ class Solution {
         while(q.size()>0){
             Pair front=q.remove();
             if(currLevel!=front.level){
-                ans.add(arr);
+                ans.add(new ArrayList<>(arr));
                 arr=new ArrayList<>();
                 currLevel++;
             }
