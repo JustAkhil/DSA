@@ -28,7 +28,7 @@ class Solution {
             Pair front=q.remove();
             if(currLevel!=front.level){
                 ans.add(new ArrayList<>(arr));
-                arr=new ArrayList<>();
+                arr.clear();
                 currLevel++;
             }
             arr.add(front.node.val);
