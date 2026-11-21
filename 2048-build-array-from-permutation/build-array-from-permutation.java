@@ -1,9 +1,12 @@
 class Solution {
     public int[] buildArray(int[] arr) {
-        int[] ans=new int[arr.length];
-        for(int i=0; i<arr.length; i++){
-            ans[i]=arr[arr[i]];
-        }
-        return ans;
+       solve(0,arr);
+       return arr;
+    }
+    public static void solve(int i,int[] arr){
+        if(i==arr.length) return;
+        int res=arr[arr[i]];
+        solve(i+1,arr);
+        arr[i]=res;
     }
 }
